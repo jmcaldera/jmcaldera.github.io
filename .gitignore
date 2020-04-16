@@ -1,4 +1,25 @@
+# Ignore files
 _site/
+.jekyll-metadata
+.DS_Store
+Gemfile.lock
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.zip
+*.vi
+*~
+
+# Folders to ignore
+node_modules
+vendor
+
+# Cache
 .sass-cache/
 .jekyll-cache/
-.jekyll-metadata
