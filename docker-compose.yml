@@ -1,7 +1,12 @@
-jekyll:
-    image: jekyll/jekyll:latest
-    command: jekyll serve --force_polling
-    ports:
-        - 4000:4000
-    volumes:
-        - .:/srv/jekyll
+version: '3'
+services:
+    jekyll:
+        # Build Dockerfile to use a custom jekyll image
+        # otherwise use image: jekyll/jekyll:3.8 instead of build: .
+        build: .
+        command: jekyll serve --drafts --force_polling
+        ports:
+            - 4000:4000
+        volumes:
+            - .:/srv/jekyll
+            - ./vendor/bundle:/usr/local/bundle
